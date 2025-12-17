@@ -1,7 +1,7 @@
 :root {
-  --bg: #16425b;
-  --c1: #e39400;
-  --c2: #9d0208;
+  --bg: #003049;
+  --c1: #faa307;
+  --c2: #d00000;
 }
 
 html {
@@ -22,19 +22,97 @@ main {
   display: flex;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 .Code_place {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 20rem;
+  height: 20rem;
   font-size: 2rem;
-  border: solid, 0.3rem, var(--c1);
   border-radius: 1rem;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  padding: 7rem;
-  box-shadow: 0 0 0.2rem #dabf8b, 0 0 2rem #e39400, 0 0 0.8rem #daae5d, 0 0 3.8rem #e39400, inset 0 0 0.3rem #e39400;
+  background-color: var(--bg);
+  padding: 5rem;
+}
+.Code_place .code-inputs {
+  display: flex;
+  gap: 10px;
+}
+.Code_place .code-inputs input {
+  width: 3rem;
+  height: 3rem;
+  border: 0.3rem solid var(--c1);
+  background-color: var(--bg);
+  color: var(--c1);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.Code_place .code-inputs input:focus {
+  outline: none;
+  border-color: var(--c1);
+}
+.error .Code_place .code-inputs input {
+  border-color: var(--c2);
+}
+.Code_place .code-inputs .success-message {
+  background: var(--bg);
+  color: var(--c1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 .Code_place p {
+  margin: 0;
   color: var(--c1);
+}
+.Code_place ::after, .Code_place ::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 10%, var(--c1));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 1rem;
+  z-index: -1;
+  padding: 5px;
+  animation: 3s spin linear infinite;
+}
+.Code_place ::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Code_place {
+    font-size: 1rem;
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+  }
+  .Code_place .Code input {
+    font-size: 0.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

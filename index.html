@@ -8,12 +8,19 @@
 </head>
 <body>
     <Main>
-        <div class="Code_place">
+        <div class="Code_place" id="codeContainer">
             <p>Jelszó szükséges a belépéshez. Kérlek, add meg!</p>
-            <div class="Code">
-                <input type="password">
+            <div class="code-inputs">
+                <input type="text" maxlength="1" data-index="1">
+                <input type="text" maxlength="1" data-index="2">
+                <input type="text" maxlength="1" data-index="3">
+                <input type="text" maxlength="1" data-index="4">
+                <input type="text" maxlength="1" data-index="5">
+                <input type="text" maxlength="1" data-index="6">
             </div>
+            <div id="successMessage" class="succes-message" style="display: none;">Code verified succesfully!</div>
         </div>
     </Main>
+    <script src="script.js"></script>
 </body>
 </html>
