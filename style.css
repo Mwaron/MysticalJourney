@@ -1,11 +1,13 @@
 :root {
+  --bg1: #000e3d;
   --bg: #003049;
   --c1: #faa307;
-  --c2: #d00000;
+  --c2: #f4faa7;
+  --tp: transparent;
 }
 
 html {
-  background-color: var(--bg);
+  background-color: var(--bg1);
 }
 
 body {
@@ -61,9 +63,6 @@ main {
   outline: none;
   border-color: var(--c1);
 }
-.error .Code_place .code-inputs input {
-  border-color: var(--c2);
-}
 .Code_place .code-inputs .success-message {
   background: var(--bg);
   color: var(--c1);
@@ -83,14 +82,14 @@ main {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), transparent 10%, var(--c1));
+  background-image: conic-gradient(from var(--angle), transparent -25%, var(--c1), var(--c2), var(--c1), var(--c2), var(--c1));
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   border-radius: 1rem;
   z-index: -1;
   padding: 5px;
-  animation: 3s spin linear infinite;
+  animation: 5s spin linear infinite;
 }
 .Code_place ::before {
   filter: blur(1.5rem);
@@ -112,7 +111,10 @@ main {
     height: 15rem;
     padding: 1rem;
   }
-  .Code_place .Code input {
-    font-size: 0.3rem;
+  .Code_place .code-inputs input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.15rem solid var(--c1);
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

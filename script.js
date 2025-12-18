@@ -1,6 +1,6 @@
 const container = document.getElementById('codeContainer');
 const inputs = document.querySelectorAll('.code-inputs input');
-const successMessage = document.getElementById('successMessage');
+const SP = document.getElementById('StoryP');
 const code = 'abc123';
 
 inputs.forEach((input, index) => {
@@ -24,8 +24,8 @@ inputs.forEach((input, index) => {
 function checkCode(){
     const userCode = Array.from(inputs).map(input => input.value.toLowerCase()).join('');
     if (userCode === code.toLowerCase()) {
-        container.querySelector('.code-inputs').style.display = 'none';
-        successMessage.style.display = 'block';
+        container.style.display = 'none';
+        SP.style.display = 'block';
     }
 }
 
