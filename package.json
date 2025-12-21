@@ -1,0 +1,28 @@
+{
+  "name": "mysticaljourney",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx esbuild script.js --bundle --outfile=dist/bundle.js --target=es2020"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mwaron/MysticalJourney.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mwaron/MysticalJourney/issues"
+  },
+  "homepage": "https://github.com/Mwaron/MysticalJourney#readme",
+  "dependencies": {
+    "animejs": "^4.2.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2"
+  }
+}

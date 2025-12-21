@@ -29,5 +29,43 @@ function checkCode(){
     }
 }
 
+
 // Auto focus the first input
 inputs[0].focus();
+
+
+
+///////////////////ANIMATIONS///////////////////
+
+import { animate, text, stagger, onScroll, createTimeline} from 'animejs';
+
+const meteor = document.getElementById('m')
+const StartS = document.getElementById('StartScreen');
+meteor.addEventListener("click", hovered);
+function hovered() {
+    meteor.style.cursor = "pointer";
+    animate(m, {
+        translateY: 1000,
+        translateX: -400,
+        scale: 0.2,
+        duration: 1500,
+
+        onComplete: () => {
+            StartS.style.display = 'none';
+            appearContainer();
+        }
+    });
+};
+
+
+function appearContainer(){
+    container.style.display = 'flex';
+    animate(container, {
+        opacity: [0, 1],
+        scale: [0.5, 1],
+        translateY: [-70, 0],
+        duration: 1000,
+        delay: 500,
+        easing: 'easeInOutSine'
+    });
+}
