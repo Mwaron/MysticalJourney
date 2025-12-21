@@ -7,6 +7,7 @@
 }
 
 html{
+    font-family: 'Sekuya', sans-serif;
     background-color: var(--bg1);
     scrollbar-width: none;
 }
@@ -33,6 +34,9 @@ main{
 }
 
 .Code_place{
+
+    font-size: 10px;
+
     position: relative;
     display: none;
     opacity: 0;
@@ -46,10 +50,88 @@ main{
     font-size: 2rem;
     border-radius: 1rem;
     backdrop-filter: blur(1rem);
-    border: solid 0.3rem var(--c1);
-    border-radius: 1rem;
+    border: 0.1rem solid var(--c1);
     padding: 5rem;
     z-index: 10;
+
+    .corner {
+		width: 0.5rem;
+		height: 0.5rem;
+		border: 1px solid var(--c1);
+		position: absolute;
+
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+		}
+
+		&::after {
+			width: 2rem;
+			height: calc(1rem - 1px);
+		}
+
+		&::before {
+			width: calc(1rem - 1px);
+			height: 2rem;
+		}
+
+		&.left {
+			left: -0.5rem;
+
+			&::after {
+				left: calc(-2px + 1rem);
+				border-left: 1px solid var(--c1);
+			}
+
+			&::before {
+				left: -1px;
+				border-left: 1px solid var(--c1);
+			}
+		}
+
+		&.right {
+			right: -0.5rem;
+
+			&::after {
+				right: calc(-2px + 1rem);
+				border-right: 1px solid var(--c1);
+			}
+
+			&::before {
+				right: -1px;
+				border-right: 1px solid var(--c1);
+			}
+		}
+
+		&.top {
+			top: -0.5rem;
+
+			&::after {
+				top: -1px;
+				border-top: 1px solid var(--c1);
+			}
+
+			&::before {
+				top: calc(-2px + 1rem);
+				border-top: 1px solid var(--c1);
+			}
+		}
+
+		&.bottom {
+			bottom: -0.5rem;
+
+			&::after {
+				bottom: -1px;
+				border-bottom: 1px solid var(--c1);
+			}
+
+			&::before {
+				bottom: calc(-2px + 1rem);
+				border-bottom: 1px solid var(--c1);
+			}
+		}
+	}
 
     .code-inputs{
         display: flex;
@@ -59,8 +141,8 @@ main{
         input{
             width: 3rem;
             height: 3rem;
-            border: 0.3rem solid var(--c1);
-            background-color: var(--bg);
+            border: 1px solid var(--c1);
+            background-color: var(--bg1);
             color: var(--c1);
             border-radius: 8px;
             text-align: center;
@@ -134,3 +216,7 @@ main{
     }
     
 }
+
+
+/// Test bordera
+
