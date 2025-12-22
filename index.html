@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Sekuya:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Strange title</title>
 </head>
@@ -12,7 +14,7 @@
         <div class="SC" id="StartScreen">
             <div id="m" class="meteor"></div>
         </div>
-        <div class="Code_place" id="codeContainer">
+        <div class="Code_place card" id="codeContainer">
             <div class="corner top left"></div>
             <div class="corner top right"></div>
             <div class="corner bottom left"></div>
@@ -27,8 +29,12 @@
                 <input type="text" maxlength="1" data-index="6">
             </div>
         </div>
-        <div id="StoryP" class="storyPart" style="display: none;">
-            <p>Gratulálunk, hogy megtaláltad a kódot!</p>
+        <div id="StoryP" class="storyPart card" style="display: none;">
+            <div class="corner top left"></div>
+            <div class="corner top right"></div>
+            <div class="corner bottom left"></div>
+            <div class="corner bottom right"></div>
+            <p>Régmúltban, a hűvös éjszakák királyságában, ahol nappal sárkányokkal harcoltál a villogó képernyőn, és nappali fáradtságodban asztalodnál pihentél, éjjel pedig álmaid palotájában jártál, ott élt egy puha őrző. Ez a bolyhos óriás, ki fejedet ringatta csillagfényben, suttogta a szélnek: „Aki engem megemel, megtalálja a királyi kincset, amit tündérek rejtettek el mélyen alattam, ahol álmok szövődnek!” Egy bátor vándor felemelte őt óvatosan... s íme, a legszebb meglepetés ragyogott elő!</p>
         </div>
     </Main>
     <script src="./dist/bundle.js"></script>

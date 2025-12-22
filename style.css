@@ -7,7 +7,7 @@
 }
 
 html {
-  font-family: "Sekuya", sans-serif;
+  font-family: "Cinzel Decorative", cursive;
   background-color: var(--bg1);
   scrollbar-width: none;
 }
@@ -20,17 +20,91 @@ body {
 main {
   width: 100vw;
   height: 100vh;
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  display: flex;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+.card {
+  font-size: 10px;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  font-size: 2rem;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border: 0.1rem solid var(--c1);
+  padding: 5rem;
+  z-index: 10;
 }
+.card .corner {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid var(--c1);
+  position: absolute;
+}
+.card .corner::after, .card .corner::before {
+  content: "";
+  position: absolute;
+}
+.card .corner::after {
+  width: 2rem;
+  height: calc(1rem - 1px);
+}
+.card .corner::before {
+  width: calc(1rem - 1px);
+  height: 2rem;
+}
+.card .corner.left {
+  left: -0.5rem;
+}
+.card .corner.left::after {
+  left: calc(-2px + 1rem);
+  border-left: 1px solid var(--c1);
+}
+.card .corner.left::before {
+  left: -1px;
+  border-left: 1px solid var(--c1);
+}
+.card .corner.right {
+  right: -0.5rem;
+}
+.card .corner.right::after {
+  right: calc(-2px + 1rem);
+  border-right: 1px solid var(--c1);
+}
+.card .corner.right::before {
+  right: -1px;
+  border-right: 1px solid var(--c1);
+}
+.card .corner.top {
+  top: -0.5rem;
+}
+.card .corner.top::after {
+  top: -1px;
+  border-top: 1px solid var(--c1);
+}
+.card .corner.top::before {
+  top: calc(-2px + 1rem);
+  border-top: 1px solid var(--c1);
+}
+.card .corner.bottom {
+  bottom: -0.5rem;
+}
+.card .corner.bottom::after {
+  bottom: -1px;
+  border-bottom: 1px solid var(--c1);
+}
+.card .corner.bottom::before {
+  bottom: calc(-2px + 1rem);
+  border-bottom: 1px solid var(--c1);
+}
+
 .Code_place {
   font-size: 10px;
   position: relative;
@@ -48,68 +122,6 @@ main {
   border: 0.1rem solid var(--c1);
   padding: 5rem;
   z-index: 10;
-}
-.Code_place .corner {
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 1px solid var(--c1);
-  position: absolute;
-}
-.Code_place .corner::after, .Code_place .corner::before {
-  content: "";
-  position: absolute;
-}
-.Code_place .corner::after {
-  width: 2rem;
-  height: calc(1rem - 1px);
-}
-.Code_place .corner::before {
-  width: calc(1rem - 1px);
-  height: 2rem;
-}
-.Code_place .corner.left {
-  left: -0.5rem;
-}
-.Code_place .corner.left::after {
-  left: calc(-2px + 1rem);
-  border-left: 1px solid var(--c1);
-}
-.Code_place .corner.left::before {
-  left: -1px;
-  border-left: 1px solid var(--c1);
-}
-.Code_place .corner.right {
-  right: -0.5rem;
-}
-.Code_place .corner.right::after {
-  right: calc(-2px + 1rem);
-  border-right: 1px solid var(--c1);
-}
-.Code_place .corner.right::before {
-  right: -1px;
-  border-right: 1px solid var(--c1);
-}
-.Code_place .corner.top {
-  top: -0.5rem;
-}
-.Code_place .corner.top::after {
-  top: -1px;
-  border-top: 1px solid var(--c1);
-}
-.Code_place .corner.top::before {
-  top: calc(-2px + 1rem);
-  border-top: 1px solid var(--c1);
-}
-.Code_place .corner.bottom {
-  bottom: -0.5rem;
-}
-.Code_place .corner.bottom::after {
-  bottom: -1px;
-  border-bottom: 1px solid var(--c1);
-}
-.Code_place .corner.bottom::before {
-  bottom: calc(-2px + 1rem);
-  border-bottom: 1px solid var(--c1);
 }
 .Code_place .code-inputs {
   display: flex;
@@ -147,13 +159,28 @@ main {
   color: var(--c1);
 }
 
+.storyPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.storyPart p {
+  font-size: 1.5rem;
+  color: var(--c1);
+  text-align: center;
+  margin: 0;
+}
+
 .StartScreen {
   position: fixed;
   height: 100%;
   width: 100%;
   background-color: var(--tp);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
@@ -177,5 +204,11 @@ main {
     height: 1.5rem;
     border: 0.15rem solid var(--c1);
     font-size: 10px;
+  }
+  .storyPart {
+    padding: 2rem;
+  }
+  .storyPart p {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */

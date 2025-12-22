@@ -7,7 +7,7 @@
 }
 
 html{
-    font-family: 'Sekuya', sans-serif;
+    font-family: 'Cinzel Decorative', cursive;
     background-color: var(--bg1);
     scrollbar-width: none;
 }
@@ -21,31 +21,23 @@ main{
     width: 100vw;
     height: 100vh;
 
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    display: flex;
 }
 
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-.Code_place{
-
+.card{
     font-size: 10px;
 
     position: relative;
-    display: none;
-    opacity: 0;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
-    width: 20rem;
-    height: 20rem;
+    width: 50%;
+    height: 50%;
+
 
     font-size: 2rem;
     border-radius: 1rem;
@@ -54,6 +46,7 @@ main{
     padding: 5rem;
     z-index: 10;
 
+    // The borders
     .corner {
 		width: 0.5rem;
 		height: 0.5rem;
@@ -131,7 +124,30 @@ main{
 				border-bottom: 1px solid var(--c1);
 			}
 		}
-	}
+	}    
+}
+
+.Code_place{
+
+    font-size: 10px;
+
+    position: relative;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 20rem;
+    height: 20rem;
+
+    font-size: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    border: 0.1rem solid var(--c1);
+    padding: 5rem;
+    z-index: 10;
+
 
     .code-inputs{
         display: flex;
@@ -177,6 +193,22 @@ main{
     }
 }
 
+.storyPart {
+  display: flex;
+  flex-direction: column;  // Stack content vertically
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;  // Prevent edge clipping
+
+  p {
+    font-size: 1.5rem;
+    color: var(--c1);
+    text-align: center; 
+    margin: 0;
+  }
+}
+
 
 .StartScreen{
     position: fixed;
@@ -184,7 +216,7 @@ main{
     width: 100%;
     background-color: var(--tp);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
@@ -212,6 +244,13 @@ main{
             height: 1.5rem;
             border: 0.15rem solid var(--c1);
             font-size: 10px;
+        }
+    }
+
+    .storyPart{
+        padding: 2rem;
+        p{
+            font-size: 0.8rem;
         }
     }
     
