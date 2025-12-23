@@ -9,7 +9,8 @@
 html{
     font-family: 'Cinzel Decorative', cursive;
     background-color: var(--bg1);
-    scrollbar-width: none;
+    overflow: hidden;
+    
 }
 
 body{
@@ -40,7 +41,7 @@ main{
 
 
     font-size: 2rem;
-    border-radius: 1rem;
+    border-radius: 0;
     backdrop-filter: blur(1rem);
     border: 0.1rem solid var(--c1);
     padding: 5rem;
@@ -73,7 +74,7 @@ main{
 			left: -0.5rem;
 
 			&::after {
-				left: calc(-2px + 1rem);
+				left: calc(-0px + 1rem);
 				border-left: 1px solid var(--c1);
 			}
 
@@ -87,7 +88,7 @@ main{
 			right: -0.5rem;
 
 			&::after {
-				right: calc(-2px + 1rem);
+				right: calc(-0px + 1rem);
 				border-right: 1px solid var(--c1);
 			}
 
@@ -106,7 +107,7 @@ main{
 			}
 
 			&::before {
-				top: calc(-2px + 1rem);
+				top: calc(-0px + 1rem);
 				border-top: 1px solid var(--c1);
 			}
 		}
@@ -120,7 +121,7 @@ main{
 			}
 
 			&::before {
-				bottom: calc(-2px + 1rem);
+				bottom: calc(-0px + 1rem);
 				border-bottom: 1px solid var(--c1);
 			}
 		}
@@ -142,7 +143,6 @@ main{
     height: 20rem;
 
     font-size: 2rem;
-    border-radius: 1rem;
     backdrop-filter: blur(1rem);
     border: 0.1rem solid var(--c1);
     padding: 5rem;
@@ -194,6 +194,7 @@ main{
 }
 
 .storyPart {
+  position: absolute;
   display: flex;
   flex-direction: column;  // Stack content vertically
   align-items: center;
@@ -249,8 +250,9 @@ main{
 
     .storyPart{
         padding: 2rem;
+        width: 70%;
         p{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
     }
     

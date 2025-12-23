@@ -9,7 +9,7 @@
 html {
   font-family: "Cinzel Decorative", cursive;
   background-color: var(--bg1);
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 body {
@@ -35,7 +35,7 @@ main {
   width: 50%;
   height: 50%;
   font-size: 2rem;
-  border-radius: 1rem;
+  border-radius: 0;
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   border: 0.1rem solid var(--c1);
@@ -64,7 +64,7 @@ main {
   left: -0.5rem;
 }
 .card .corner.left::after {
-  left: calc(-2px + 1rem);
+  left: calc(0px + 1rem);
   border-left: 1px solid var(--c1);
 }
 .card .corner.left::before {
@@ -75,7 +75,7 @@ main {
   right: -0.5rem;
 }
 .card .corner.right::after {
-  right: calc(-2px + 1rem);
+  right: calc(0px + 1rem);
   border-right: 1px solid var(--c1);
 }
 .card .corner.right::before {
@@ -90,7 +90,7 @@ main {
   border-top: 1px solid var(--c1);
 }
 .card .corner.top::before {
-  top: calc(-2px + 1rem);
+  top: calc(0px + 1rem);
   border-top: 1px solid var(--c1);
 }
 .card .corner.bottom {
@@ -101,7 +101,7 @@ main {
   border-bottom: 1px solid var(--c1);
 }
 .card .corner.bottom::before {
-  bottom: calc(-2px + 1rem);
+  bottom: calc(0px + 1rem);
   border-bottom: 1px solid var(--c1);
 }
 
@@ -116,7 +116,6 @@ main {
   width: 20rem;
   height: 20rem;
   font-size: 2rem;
-  border-radius: 1rem;
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   border: 0.1rem solid var(--c1);
@@ -160,6 +159,7 @@ main {
 }
 
 .storyPart {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,8 +207,9 @@ main {
   }
   .storyPart {
     padding: 2rem;
+    width: 70%;
   }
   .storyPart p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=style.css.map */

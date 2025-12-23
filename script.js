@@ -1,7 +1,7 @@
 const container = document.getElementById('codeContainer');
 const inputs = document.querySelectorAll('.code-inputs input');
 const SP = document.getElementById('StoryP');
-const code = 'abc123';
+const code = '111111'; //4901SY
 
 inputs.forEach((input, index) => {
     input.addEventListener('input', (e) => {
@@ -24,8 +24,8 @@ inputs.forEach((input, index) => {
 function checkCode(){
     const userCode = Array.from(inputs).map(input => input.value.toLowerCase()).join('');
     if (userCode === code.toLowerCase()) {
-        container.style.display = 'none';
-        SP.style.display = 'block';
+        disappearContainer();
+        appearStory();
     }
 }
 
@@ -63,9 +63,31 @@ function appearContainer(){
     animate(container, {
         opacity: [0, 1],
         scale: [0.5, 1],
-        translateY: [-70, 0],
-        duration: 1000,
-        delay: 500,
-        easing: 'easeInOutSine'
+        duration: 2100,
+        ease: 'outElastic(1,0.8)'
+    });
+}
+
+function disappearContainer(){
+    animate(container, {
+        opacity: 1,
+        scale: [1, 0.8],
+        translateY: [0, "-100vh"],
+        duration: 2500,
+        ease: 'outExpo',
+
+        onComplete: () => {
+            container.style.display = 'none';
+        }
+    });
+}
+
+function appearStory(){
+    SP.style.display = 'flex';
+    animate(SP, {
+        scale: [0.8, 1],
+        translateY: ["100vh", 0],
+        duration: 2500,
+        ease: 'outExpo'
     });
 }
