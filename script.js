@@ -48,7 +48,8 @@ function hovered() {
         translateY: 1000,
         translateX: -400,
         scale: 0.2,
-        duration: 1500,
+        duration: 800,
+        ease: 'inCirc',
 
         onComplete: () => {
             StartS.style.display = 'none';
