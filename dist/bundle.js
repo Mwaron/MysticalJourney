@@ -2526,7 +2526,7 @@
       var container = document.getElementById("codeContainer");
       var inputs = document.querySelectorAll(".code-inputs input");
       var SP = document.getElementById("StoryP");
-      var code = "111111";
+      var code = "4901SY";
       inputs.forEach((input, index) => {
         input.addEventListener("input", (e) => {
           let value = e.target.value.toUpperCase().replace(/[^a-z0-9]/gi, "");

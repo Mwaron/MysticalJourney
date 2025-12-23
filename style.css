@@ -171,7 +171,7 @@ main {
   font-size: 1.5rem;
   color: var(--c1);
   text-align: center;
-  margin: 0;
+  margin: 10px;
 }
 
 .StartScreen {
@@ -194,7 +194,7 @@ main {
 
 @media screen and (max-width: 425px) {
   .Code_place {
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 15rem;
     height: 15rem;
     padding: 1rem;
@@ -206,10 +206,11 @@ main {
     font-size: 10px;
   }
   .storyPart {
-    padding: 2rem;
+    padding: 1.2rem;
     width: 70%;
+    height: auto;
   }
   .storyPart p {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
 }/*# sourceMappingURL=style.css.map */

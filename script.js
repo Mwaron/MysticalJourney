@@ -1,7 +1,7 @@
 const container = document.getElementById('codeContainer');
 const inputs = document.querySelectorAll('.code-inputs input');
 const SP = document.getElementById('StoryP');
-const code = '111111'; //4901SY
+const code = '4901SY'; //4901SY
 
 inputs.forEach((input, index) => {
     input.addEventListener('input', (e) => {
