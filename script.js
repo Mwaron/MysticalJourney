@@ -41,9 +41,16 @@ import { animate, text, stagger, onScroll, createTimeline} from 'animejs';
 
 const meteor = document.getElementById('m')
 const StartS = document.getElementById('StartScreen');
+
+animate(meteor, {
+    translateX: [50, 0, 50],
+    easing: 'easeInOutQuad',
+    loop: true,
+    duration: 3000,
+});
+
 meteor.addEventListener("click", hovered);
 function hovered() {
-    meteor.style.cursor = "pointer";
     animate(m, {
         translateY: 1000,
         translateX: -400,

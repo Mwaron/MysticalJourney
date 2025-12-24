@@ -2550,9 +2550,14 @@
       inputs[0].focus();
       var meteor = document.getElementById("m");
       var StartS = document.getElementById("StartScreen");
+      animate(meteor, {
+        translateX: [50, 0, 50],
+        easing: "easeInOutQuad",
+        loop: true,
+        duration: 3e3
+      });
       meteor.addEventListener("click", hovered);
       function hovered() {
-        meteor.style.cursor = "pointer";
         animate(m, {
           translateY: 1e3,
           translateX: -400,
